@@ -1,0 +1,35 @@
+<ion-view view-title="Add Customer">
+  <ion-content>
+    <ion-list>
+   
+     <form name="customerForm" ng-controller="CustomerCtrl" ng-submit="addCustomer()" >
+
+      	<label class="item item-input item-stacked-label">
+   			<span class="input-label">Name</span>
+    		<input type="text"  name="name" ng-model="formData.name" ng-required="true">
+    		<p ng-show="customerForm.name.$invalid" class="help-block">You name is required.</p>
+
+  	  	</label>
+    	<label class="item item-input item-stacked-label">
+    		<span class="input-label">Address</span>
+    		<input type="text"  name="address" ng-model="formData.address" ng-required="true">
+    		<p ng-show="customerForm.address.$invalid" class="help-block">You address is required.</p>
+  		</label>
+  		<label class="item item-input item-stacked-label">
+    		<span class="input-label">Phone Number</span>
+    		<input type="text"  name="phoneNumber" ng-model="formData.phoneNumber" ng-required="true">
+    		<p ng-show="customerForm.phoneNumber.$invalid" class="help-block">You phone number is required.</p>
+  		</label>
+
+
+        <div>
+			<button type ="submit" class="button button-block button-positive ion-android-person-add" ng-disabled="customerForm.$invalid" >
+        		Add Customer
+        	</button>
+        </div>
+  		
+  	  </form>
+
+    </ion-list>
+  </ion-content>
+</ion-view>

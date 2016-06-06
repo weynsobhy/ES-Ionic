@@ -1,0 +1,25 @@
+<ion-modal-view class="login">
+  <div class="custom-backdrop"></div>
+  <div class="card">
+    <div class="item item-text-wrap">
+      <img src="img/logo-25%25-dark.png" style="display: block; height: 60px; margin: 20px auto; opacity: .7;">
+      <div class="loginform">
+        <form ng-submit="doLogin(loginData)">
+          <div class="list">
+            <label class="item item-input">
+              <i class="icon ion-person placeholder-icon"></i>
+              <input type="text" placeholder="Username" ng-model="loginData.username">
+            </label>
+            <label class="item item-input">
+              <i class="icon ion-locked placeholder-icon"></i>
+              <input type="password" placeholder="Password" ng-model="loginData.password">
+            </label>
+          </div>
+          <button class="button button-block button-energized" type="submit">Login</button>
+          <button class="button button-block button-positive" type="button" ng-click="register()">Register</button>
+          <a href="#" class="button button-block button-clear button-dark">Forgot Password?</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</ion-modal-view>
